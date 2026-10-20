@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mhamad Adil - المشاريع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner-box">
+            <div class="circle-border"><div class="circle-core"></div></div>
+            <p class="loader-text">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">Mhamad <span>Adil</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="projects.html" class="active">المشاريع</a></li>
+            <li><a href="profile.html">الملف الشخصي</a></li>
+            <li><a href="contact.html">التواصل معي</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fa-solid fa-user-lock"></i> تسجيل الدخول</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="add-project" class="section-container">
+            <h2 class="section-title">إضافة مشروع جديد للمعرض</h2>
+            <form id="project-form" class="glass-card">
+                <div class="form-group">
+                    <label for="project-title"><i class="fa-solid fa-heading"></i> عنوان المشروع</label>
+                    <input type="text" id="project-title" placeholder="أدخل اسم المشروع" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-desc"><i class="fa-solid fa-align-right"></i> وصف المشروع</label>
+                    <textarea id="project-desc" rows="3" placeholder="اكتب وصفاً قصيراً عن المشروع" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project-code"><i class="fa-solid fa-code"></i> الكود البرمجي (HTML / CSS / JS / Code)</label>
+                    <textarea id="project-code" rows="5" placeholder="أدخل الكود المصدري هنا..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project-image"><i class="fa-solid fa-image"></i> رفع صورة المشروع</label>
+                    <input type="file" id="project-image" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> نشر المشروع</button>
+            </form>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title">معرض المشاريع</h2>
+            <div id="projects-grid" class="projects-grid"></div>
+        </section>
+    </main>
+
+    <div id="code-modal" class="modal">
+        <div class="modal-content glass-card code-modal-content">
+            <span class="close-code-modal">&times;</span>
+            <h3 id="code-modal-title">كود المشروع</h3>
+            <textarea id="modal-code-editor" rows="12"></textarea>
+            <button id="save-code-btn" class="btn-submit" style="margin-top: 10px;">حفظ التعديلات</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> العودة للرئيسية</a>
+            <a href="profile.html" class="dev-profile-link"><i class="fa-solid fa-user"></i> عرض بروفايل المُطَور</a>
+            <p class="copyright">© 2026 جميع الحقوق محفوظة | تم تطوير الموقع من قبل <strong>Mhamad Adil</strong></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

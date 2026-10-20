@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mhamad Adil - التواصل معي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner-box">
+            <div class="circle-border"><div class="circle-core"></div></div>
+            <p class="loader-text">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">Mhamad <span>Adil</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="projects.html">المشاريع</a></li>
+            <li><a href="profile.html">الملف الشخصي</a></li>
+            <li><a href="contact.html" class="active">التواصل معي</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fa-solid fa-user-lock"></i> تسجيل الدخول</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section-container">
+            <h2 class="section-title">التواصل معي</h2>
+            <form id="contact-form" class="glass-card">
+                <div class="form-group">
+                    <label for="contact-name">الاسم الكريم الكامل</label>
+                    <input type="text" id="contact-name" placeholder="اكتب اسمك الكامل" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">البريد الإلكتروني</label>
+                    <input type="email" id="contact-email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">قلنا عن ملاحظاتك حول الموقع او عن اي شي حابب تستفسر عنو</label>
+                    <textarea id="contact-message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال الرسالة <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> العودة للرئيسية</a>
+            <a href="profile.html" class="dev-profile-link"><i class="fa-solid fa-user"></i> عرض بروفايل المُطَور</a>
+            <p class="copyright">© 2026 جميع الحقوق محفوظة | تم تطوير الموقع من قبل <strong>Mhamad Adil</strong></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
