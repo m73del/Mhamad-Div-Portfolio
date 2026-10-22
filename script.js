@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!usernameInput || !passwordInput) return;
 
-    if (usernameInput.value === "Bo3Dil" && passwordInput.value === "123456") {
+    if (usernameInput.value === "M.Code737" && passwordInput.value === "​zK9#vL7!mP$2026") {
       isAdminLoggedIn = true;
       localStorage.setItem("bo3dil_is_admin", "true");
       updateAdminUI();
