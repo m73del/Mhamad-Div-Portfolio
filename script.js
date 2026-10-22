@@ -1,6 +1,3 @@
-// ==========================================
-// 1. إخفاء شاشة التحميل فوراً (بدون انتظار)
-// ==========================================
 const loader = document.getElementById("loader");
 if (loader) {
   setTimeout(() => {
@@ -11,12 +8,8 @@ if (loader) {
   }, 300);
 }
 
-// البدء بتنفيذ باقي الوظائف بعد تحميل العناصر
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ==========================================
-  // 2. نظام تفعيل الثيم (Dark / Light Mode)
-  // ==========================================
   const themeToggleBtn = document.getElementById("theme-toggle");
   const currentTheme = localStorage.getItem("bo3dil_theme") || "dark";
 
@@ -40,9 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ==========================================
-  // 3. إدارة المشاريع والتخزين المحلي
-  // ==========================================
   let projects = [];
   try {
     projects = JSON.parse(localStorage.getItem("bo3dil_projects")) || [];
@@ -102,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // إضافة مشروع جديد (حقل الكود اختياري)
   projectForm?.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -179,9 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(`تم نسخ رابط الموقع لمشاركة مشروع "${title}"!`);
   };
 
-  // ==========================================
-  // 4. نافذة تعديل وعرض الكود البرمجي
-  // ==========================================
   const codeModal = document.getElementById("code-modal");
   const modalCodeEditor = document.getElementById("modal-code-editor");
   const saveCodeBtn = document.getElementById("save-code-btn");
@@ -214,9 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // ==========================================
-  // 5. نظام الآدمن وتسجيل الدخول والبروفايل
-  // ==========================================
   const loginForm = document.getElementById("login-form");
   const avatarEditLabel = document.getElementById("avatar-edit-label");
   const loginNavBtn = document.querySelector(".login-btn");

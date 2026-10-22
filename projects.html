@@ -24,7 +24,6 @@
             <li><a href="profile.html">الملف الشخصي</a></li>
             <li><a href="contact.html">التواصل معي</a></li>
             <li><a href="login.html" class="login-btn"><i class="fa-solid fa-user-lock"></i> تسجيل الدخول</a></li>
-            <!-- زر تبديل الوضع (Dark / Light Mode) -->
             <li>
                 <button id="theme-toggle" class="theme-toggle-btn" title="تغيير المظهر">
                     <i class="fa-solid fa-moon"></i>
@@ -47,12 +46,12 @@
                 </div>
                 <div class="form-group">
                     <label for="project-code"><i class="fa-solid fa-code"></i> الكود البرمجي (اختياري)</label>
-                    <!-- تم إزالة required ليصبح الحقل اختياري -->
                     <textarea id="project-code" rows="5" placeholder="أدخل الكود المصدري هنا (إن وجد)..."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="project-image"><i class="fa-solid fa-image"></i> رفع صورة المشروع</label>
-                    <input type="file" id="project-image" accept="image/*" required>
+                    <input type="file" id="project-image" class="custom-file-input" accept="image/*" required>
+                    
                 </div>
                 <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> نشر المشروع</button>
             </form>
