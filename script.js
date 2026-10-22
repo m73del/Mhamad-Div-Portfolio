@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
   projectForm?.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (projects.length >= 10) {
-      alert("عذراً، الحد الأقصى للمشاريع المسموح باستضافتها هو 10 مشاريع فقط.");
+    if (projects.length >= 50) {
+      alert("عذراً، الحد الأقصى للمشاريع المسموح باستضافتها هو 50 مشاريع فقط.");
       return;
     }
 
