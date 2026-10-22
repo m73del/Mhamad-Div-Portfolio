@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateAdminUI();
 
-  loginForm?.addEventListener("submit", (e) => {
+  loginForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     
     const usernameInput = loginForm.querySelector("input[type='text']");
@@ -229,15 +229,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!usernameInput || !passwordInput) return;
 
-    if (usernameInput.value === "M.Code737" && passwordInput.value === "​zK9#vL7!mP$2026") {
-      isAdminLoggedIn = true;
-      localStorage.setItem("bo3dil_is_admin", "true");
-      updateAdminUI();
-      loginForm.reset();
-      alert("أهلاً بك يا معلم Bo3Dil! تم تفعيل صلاحيات التعديل.");
-      window.location.href = "index.html";
-    } else {
-      alert("بيانات الدخول غير صحيحة! الميزة مخصصة للآدمن فقط.");
+    const email = usernameInput.value;
+    const password = passwordInput.value;
+
+    try {
+      
+      const response = await fetch('http://localhost:3000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        isAdminLoggedIn = true;
+        localStorage.setItem("bo3dil_is_admin", "true");
+        updateAdminUI();
+        loginForm.reset();
+        alert("أهلاً بك يا معلم Bo3Dil! تم تفعيل صلاحيات التعديل.");
+        window.location.href = "index.html";
+      } else {
+
+        alert(data.message || "بيانات الدخول غير صحيحة!");
+      }
+    } catch (error) {
+      console.error("خطأ في الاتصال بالسيرفر:", error);
+      alert("تعذر الاتصال بالسيرفر! تأكد أن سيرفر Node.js شغال.");
     }
   });
 
