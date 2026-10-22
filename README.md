@@ -19,3 +19,11 @@
 2. انتقل إلى مجلد السيرفر:
    ```bash
    cd server
+ثيت المكتبات اللازمة:
+    npm install
+
+شغل السيرفر:
+    node server.js 
+
+- **مستودع السيرفر (Backend Repository):** [Secure-Portfolio](https://github.com/m73del/Secure-Portfolio.git)
+-
